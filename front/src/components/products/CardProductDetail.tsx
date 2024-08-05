@@ -18,7 +18,7 @@ const CardProductDetail: React.FC<{ id: number }> = ({ id }) => {
       .catch((err) => console.log(err));
   }, [id]);
 
-  const [cantidad, setCantidad] = useState<number>(0);
+  const [cantidad, setCantidad] = useState<number>(1);
 
   const sumar = (): void => {
     if (product?.stock && product?.stock > cantidad) setCantidad(cantidad + 1);
@@ -36,7 +36,7 @@ const CardProductDetail: React.FC<{ id: number }> = ({ id }) => {
         <section className="flex md:flex-row md:gap-2 flex-col w-11/12 mx-auto pt-9 ">
           <div className="md:w-2/5 w-full flex md:justify-end justify-center">
             <Image
-            loading="lazy"
+              loading="lazy"
               src={product ? product.image : "/producto-default.png"}
               alt={product ? product.name : ""}
               className="md:w-10/12 w-4/5 md:min-w-72"
@@ -77,9 +77,7 @@ const CardProductDetail: React.FC<{ id: number }> = ({ id }) => {
                 </button>
               </div>
               <button
-                onClick={() =>
-                  loadCart(product, cantidad, dataUser)
-                }
+                onClick={() => loadCart(product, cantidad, dataUser)}
                 className="bg-custom-orange sm:mt-0 mt-2 text-custom-white px-2 border hover:bg-transparent hover:border-custom-orange hover:text-custom-orange sm:w-auto w-1/2 min-w-36"
               >
                 Añadir al carrito
