@@ -138,14 +138,11 @@ const Navbar: React.FC = () => {
         </>
       ) : (
         <div className="flex sm:gap-4 sm:text-lg text-sm gap-2 sm:flex-row flex-col text-custom-white">
-          <Link
-            href={PATHROUTES.REGISTER}
-            className={`hover:text-custom-blue `}
-          >
-            REGISTER
+          <Link href={PATHROUTES.HOME} className={`hover:text-custom-blue `}>
+            SHOP
           </Link>
           <Link href={PATHROUTES.LOGIN} className="hover:text-custom-blue">
-            LOGIN
+            LOGIN/REGISTER
           </Link>
         </div>
       )}
