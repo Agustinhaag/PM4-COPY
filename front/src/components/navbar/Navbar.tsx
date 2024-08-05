@@ -142,7 +142,10 @@ const Navbar: React.FC = () => {
             SHOP
           </Link>
           <Link href={PATHROUTES.LOGIN} className="hover:text-custom-blue">
-            LOGIN/REGISTER
+            LOGIN
+          </Link>
+          <Link href={PATHROUTES.REGISTER} className="hover:text-custom-blue sm:flex hidden">
+            REGISTER
           </Link>
         </div>
       )}
